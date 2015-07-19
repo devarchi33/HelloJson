@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+
+//mainClassName = "hello.SimpleJson"
+//mainClassName = "json.gson.ObjectToJson"
+//mainClassName = "json.gson.TestGson"
+mainClassName = "json.gson.TestGsonString"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile	'com.googlecode.json-simple:json-simple:1.1.1'
+	compile 'com.google.code.gson:gson:2.3.1'
+
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.5'
+}
